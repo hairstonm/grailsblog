@@ -13,13 +13,5 @@
           <p>Last Updated: ${post.lastUpdated}</p>
       </div>
   </g:each>
-  <g:link controller="post" action="edit">
-    Create a new post
-</g:link>
-
-
-
-
-
   </body>
 </html>

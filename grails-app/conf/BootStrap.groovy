@@ -1,3 +1,5 @@
+import grailsblog.Post
+
 class BootStrap {
 
     def init = { servletContext ->
@@ -14,6 +16,5 @@ class BootStrap {
            published:false).save()
 
     }
-    def destroy = {
-    }
+    
 }
