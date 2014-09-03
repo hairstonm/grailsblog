@@ -16,6 +16,5 @@ class BootStrap {
            published:false).save()
 
     }
-    def destroy = {
-    }
+    
 }
