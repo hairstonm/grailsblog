@@ -15,16 +15,13 @@
   </g:each>
   <g:link controller="post" action="edit">
     Create a new post
-<<<<<<< HEAD
+
 	</g:link>
 	
-=======
-</g:link>
 
 
 
 
->>>>>>> 993987a842baf03c830ccb252431728763ad67cf
 
   </body>
 </html>

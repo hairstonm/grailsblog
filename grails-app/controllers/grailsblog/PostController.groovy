@@ -19,7 +19,7 @@ def list = {
                     sort:'lastUpdated',
                     order:'desc')])
 }
-<<<<<<< HEAD
+
 def save = {
     def post = loadPost(params.id)
     post.properties = params
@@ -39,27 +39,7 @@ private loadPost(id) {
 }
 def view = {
     render(view:'view', model:[post:Post.get(params.id)])
-=======
-
-def save = {
-	def post = loadPost(params.id)
-	post.properties = params
-	if(post.save()) {
-		redirect(action:'list')
-	} else {
-		render(view:'edit', model:[post:post])
-	}
 }
 
-private loadPost(id) {
-	def post = new Post();
-	if(id) {
-		post = Post.get(id)
-	}
-	return post
-}
-def view = {
-	render(view:'view', model:[post:Post.get(params.id)])
->>>>>>> 993987a842baf03c830ccb252431728763ad67cf
-}
+
 }
