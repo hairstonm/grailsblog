@@ -1,5 +1,6 @@
 package grailsblog
-
+import java.util.Date;
+import java.util.SortedSet;
 class Post {
 
    static hasMany = [comments:Comment]

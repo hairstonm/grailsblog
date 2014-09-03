@@ -1,7 +1,17 @@
 package grailsblog
 
-class Comment {
+class Comment implements Comparable{
+	static belongsTo = Post
+	Post post
+	String comment
+	Commentator who = new Commentator()
+	Date dateCreated
 
-    static constraints = {
+	
+    public int compareTo(Object o) {
+		return o.dateCreated.compareTo(dateCreated)
+	}
+	
+	static constraints = {
     }
 }
