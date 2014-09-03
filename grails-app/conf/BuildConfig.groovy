@@ -47,6 +47,8 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
+		//compile ":kickstart-with-bootstrap:1.1.0"
+		//compile ":twitter-bootstrap:3.2.0.2"
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
