@@ -1,11 +1,8 @@
-<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-<head>
-<title>
-	${post.title}
-	
-</title>
-<link rel="stylesheet"
+  <head>
+      <title>Create Comment</title>
+       <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href=“http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -13,10 +10,9 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-	<header role="banner">
+  </head>
+  <body>
+  <header role="banner">
 		<nav role="navigation" class="navbar navbar-static-top navbar-default">
 			<div class="container">
 				<div class="navbar-header">
@@ -39,43 +35,38 @@
 			</div>
 		</nav>
 	</header>
-			
 	<div class= "container-fluid">
-	<div class="row">	
-	<h1>
-		${post.title}
-	</h1>
-	<p>
-		${post.teaser}
-	</p>
-	<div>
-		${post.content}
-	</div>
-	<div>
-	<g:link controller="comment" action="editCommit" id="${post.id}">Add Comment </g:link>
-		<g:if test="${post.comments.isEmpty()}">
-		</g:if>
-		<g:else>
-		<h5>Comments:</h5>
-		<g:each in="${post.comments}" var="comment">
-			<div class="comment">
-				<p>
-					${comment.comment }
-				</p>
-				<p>
-					Made by:
-					${comment.who.name}
-					on
-					${comment.dateCreated}
-				</p>
-			</div>
-		</g:each>
-		</g:else>
-		</div>
-	</div>
-
-</body>
-<footer role="contentinfo">
+	<div class="row">
+  <h1>Create a comment</h1>
+  <div id="validationerrors">
+      <g:renderErrors bean="${comment}"/>
+  </div>
+  <g:form controller="comment" action="save">
+      <g:hiddenField name="postId" value="${postId}"/>
+      <dl>
+          <dt>Your name:</dt>
+          <dd>
+          <g:textField name="who.name" value="${comment.who.name}"/>
+          </dd>
+          <dt>Your email:</dt>
+          <dd>
+          <g:textField name="who.email" value="${comment.who.email}"/>
+          </dd>
+          <dt>Your website/blog:</dt>
+          <dd>
+          <g:textField name="who.url" value="${comment.who.url}"/>
+          </dd>
+          <dt>Add your comment:</dt>
+          <dd>
+          <g:textArea name="comment" value="${comment.comment}" rows="20" cols="50"/>
+          </dd>
+      </dl>
+        <g:submitButton name="submit" value="Save"/>
+  </g:form>
+  </div>
+  </div>
+  </body>
+  <footer role="contentinfo">
 <p>
 <small>Copyright &copy; Manifest Solutions</small>
 </p>

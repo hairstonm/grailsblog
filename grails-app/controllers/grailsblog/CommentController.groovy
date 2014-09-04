@@ -2,9 +2,9 @@ package grailsblog
 
 class CommentController {
 
-    def edit = {
+    def editCommit = {
 		def post = Post.get(params.id)
-        render(view:'edit',
+        render(view:'editCommit',
                 model:[
                         comment:new Comment(),
                         postId:post.id])
@@ -20,7 +20,7 @@ class CommentController {
                     action:'view',
                     id:params.postId)
         } else {
-            render(view:'edit',
+            render(view:'editCommit',
                     model:[comment:comment,
                             postId:params.postId])
         }
