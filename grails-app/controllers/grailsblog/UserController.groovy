@@ -1,6 +1,8 @@
 package grailsblog
 class UserController {
 	
+	
+	def userService
 	  def login = {
 		render(view: "login")
 	  }
@@ -16,6 +18,7 @@ class UserController {
 		}
 	  
 		def logout = {
+			flash.message = "Goodbye, you are logged out"
 		  session.invalidate()
 		  redirect(controller: 'post', action: 'list')
 		}
