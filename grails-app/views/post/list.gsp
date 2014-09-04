@@ -28,7 +28,8 @@
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="edit"><a href="/grailsblog/">Home</a></li>
+						<li class="edit"><a href="/grailsblog/user/login">login</a></li>
+						
 						
 					</ul>
 				</div>
@@ -68,9 +69,9 @@
 
 
 			<g:link controller="comment" action="editCommit" id="${post.id}">Add Comment </g:link>
-		<g:link controller="user" action="logout">
- 			 Logout
-		</g:link>
+		<g:secureLink controller="user" action="logout">
+    Logout
+  </g:secureLink>
 		</div>
 	</g:each>
 	<p>
