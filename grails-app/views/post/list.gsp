@@ -62,16 +62,23 @@
 				Last Updated:
 				${post.lastUpdated}
 			</p>
-			<g:link controller="post" action="edit" id="${post.id}">
-          Edit this post 
-          </g:link>
-			<g:link controller="comment" action="editCommit" id="${post.id}">Add Comment </g:link>
+			<g:secureLink controller="post" action="edit" id="${post.id}">
+ 				 Edit this post
+			</g:secureLink>
 
+
+			<g:link controller="comment" action="editCommit" id="${post.id}">Add Comment </g:link>
+		<g:link controller="user" action="logout">
+ 			 Logout
+		</g:link>
 		</div>
 	</g:each>
 	<p>
-		<g:link controller="post" action="edit">Create a new post </g:link>
+		<g:secureLink controller="post" action="edit">
+  			Create a new post
+		</g:secureLink>
 	</p>
+	
 			</div>
 			<div id="navigation" class="row hidden">
 				<button id="previous" class="btn btn-default"> Previous </button>

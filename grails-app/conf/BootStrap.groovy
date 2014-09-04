@@ -1,9 +1,14 @@
 import grailsblog.Post
+import grailsblog.User
 
 class BootStrap {
 
 	def init = { servletContext ->
-
+		new User(username:"me",
+		password:"password",
+		firstName:"A",
+		lastName:"Developer").save()
+		
 		new Post(title:"First Grails Project",
 		teaser:"Clearing out the clutter",
 		content:"The full content of the article",
@@ -59,7 +64,7 @@ class BootStrap {
 		teaser:"The follow up on some real penguins.",
 		content:"The full content of the article",
 		published:false).save()
-		
+
 		new Post(title:"Getting Ready for live lions",
 		teaser:"The follow up on some real lions.",
 		content:"The full content of the article",
