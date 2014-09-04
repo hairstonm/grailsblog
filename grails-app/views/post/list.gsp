@@ -28,7 +28,13 @@
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="edit"><a href="/grailsblog/user/login">login</a></li>
+						<li> <g:if test = "${session.user}"> 
+						<g:link controller="user" action="logout">Logout</g:link>
+						</g:if>
+   
+  				<g:else> <g:link controller="user" action="login">Login</g:link> 
+  				</g:else>
+						</li>
 						
 						
 					</ul>
@@ -48,6 +54,9 @@
 			</div>
 			
 	<div class="row">
+	<g:secureLink controller="post" action="edit">
+  			Create a new post
+		</g:secureLink>
 				<h1>My Posts</h1>
 				<g:each in="${posts}" var="post">
 		<div id="${post.id}">
@@ -69,9 +78,6 @@
 
 
 			<g:link controller="comment" action="editCommit" id="${post.id}">Add Comment </g:link>
-		<g:secureLink controller="user" action="logout">
-    Logout
-  </g:secureLink>
 		</div>
 	</g:each>
 	<p>
