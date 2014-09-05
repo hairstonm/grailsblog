@@ -98,6 +98,7 @@
 			<div id="searchResults" class="row">
 			</div>
 	</div>
+	
 </body>
 <footer role="contentinfo">
 <p>
@@ -105,5 +106,6 @@
 </p>
 </footer>
 </body>
+
 </html>
 </html>

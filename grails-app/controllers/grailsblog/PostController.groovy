@@ -11,7 +11,12 @@ class PostController {
 		}
 		render(view:'edit', model:[post:post])
 	}
-
+	def delete = {
+		def post = new Post()
+		post = loadPost(params.id)
+		post.delete()
+		redirect(action:'index')
+	}
 	def list = {
 		render(
 				view:'list',
@@ -32,7 +37,10 @@ class PostController {
 	def view = {
 		render(view:'view', model:[post:Post.get(params.id)])
 	}
-	
+	def searchView = {
+		render(
+			view:'search')
+	}
 	private loadPost(id) {
 		def post = new Post();
 		if(id) {
