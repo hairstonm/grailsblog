@@ -3,5 +3,7 @@ Given(/^my favorite blogger has been very active$/) do
 end
 
 When(/^I visit the blog for my favorite blogger$/) do
-  visit_page grailsBlogMainPage
+  on_page Blog do |page|
+    page.post2_link
+  end
 end
