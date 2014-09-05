@@ -50,13 +50,16 @@
 			<div class="row">
 				<button id="searchButton" type="button" class="btn btn-primary">
 					<i class="fa fa-search"></i> Search 
+					
 				</button>
 			</div>
 			
 	<div class="row">
+	<h2></h2>
 	<g:secureLink controller="post" action="edit">
+	
   			Create a new post
-		</g:secureLink>
+		</g:secureLink> </h2>
 				<h1>My Posts</h1>
 				<g:each in="${posts}" var="post">
 		<div id="${post.id}">

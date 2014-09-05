@@ -28,7 +28,12 @@
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="edit"><a href="/grailsblog/">Home</a></li>
+						<li> <g:if test = "${session.user}"> 
+						<g:link controller="user" action="logout">Logout</g:link>
+						</g:if>
+   
+  				<g:else> <g:link controller="user" action="login">Login</g:link> 
+  				</g:else></li>
 						
 					</ul>
 				</div>
