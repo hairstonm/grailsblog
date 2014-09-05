@@ -23,7 +23,7 @@ Then(/^I am notified that the blog post was successfully added$/) do
 end
 
 And(/^the newly added blog post is at the top of the recent posts list$/) do
-  on grailsblogMainPage do |page|
+  on HomePage do |page|
     title = page.results
     regexTitle = title[/Blog test post/]
     expect(regexTitle).to eq('Blog test post')
