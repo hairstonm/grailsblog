@@ -158,7 +158,7 @@ img {
 }
 
 .nav a {
-	color: #666666;
+	color: #53453;
 	display: block;
 	padding: 0.25em 0.7em;
 	text-decoration: none;
@@ -168,7 +168,7 @@ img {
 }
 
 .nav a:active, .nav a:visited {
-	color: #666666;
+	color: #63463;
 }
 
 .nav a:focus, .nav a:hover {
@@ -522,7 +522,7 @@ th:hover, tr:hover {
 /* ACTION BUTTONS */
 
 .buttons {
-	background-color: #efefef;
+	background-color: #000000;
 	overflow: hidden;
 	padding: 0.3em;
 	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
