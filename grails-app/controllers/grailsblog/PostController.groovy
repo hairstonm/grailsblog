@@ -37,10 +37,7 @@ class PostController {
 	def view = {
 		render(view:'view', model:[post:Post.get(params.id)])
 	}
-	def searchView = {
-		render(
-			view:'search')
-	}
+	
 	private loadPost(id) {
 		def post = new Post();
 		if(id) {
