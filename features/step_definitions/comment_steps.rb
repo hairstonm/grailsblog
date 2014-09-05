@@ -4,7 +4,7 @@ require "page-object"
 include PageObject::PageFactory
 
 Then(/^I should see comments left by other readers$/) do
-  on_page grailsBlogTestArticlePage do |page|
+  on_page HomePage do |page|
   response = Array.new
 
     (0..1).each do |i|
@@ -15,8 +15,8 @@ Then(/^I should see comments left by other readers$/) do
 end
 
 Given(/^I am reading a blog post from my favorite blogger$/) do
-  visit_page grailsBlogMainPage
-  on_page grailsBlogMainPage do |page|
+  visit_page HomePage
+  on_page HomePage do |page|
 
     page.click_post_link('test')
   end
